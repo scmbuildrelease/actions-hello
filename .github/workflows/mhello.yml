@@ -1,4 +1,4 @@
-name: Hello Action
+name: Hello multi Action
 
 on:
   push:                # run on every push
