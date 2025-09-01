@@ -1,0 +1,14 @@
+name: Hello Action
+on:
+  push:                # run on every push
+  workflow_dispatch:   # allow manual run via button
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Say hello
+        run: echo "Hello from $GITHUB_ACTOR on commit $GITHUB_SHA"
